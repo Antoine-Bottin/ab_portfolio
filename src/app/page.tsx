@@ -14,6 +14,14 @@ const interview = [
     object: 'My favorite color',
     content: 'Patattieiteiteititietieiteit',
   },
+  {
+    object: 'My favorite color',
+    content: 'Patattieiteiteititietieiteit',
+  },
+  {
+    object: 'My favorite color',
+    content: 'Patattieiteiteititietieiteit',
+  },
 ]
 
 const Page = () => {
@@ -21,18 +29,13 @@ const Page = () => {
     <div className="home-view">
       <div className="home-view__picture-section">
         <div className="home-view__picture-section__picture">
-          <Image
-            src="/assets/Photo_CV.jpg"
-            alt="My picture"
-            fill
-            style={{ borderRadius: '50%' }}
-          />
+          <Image src="/assets/Photo_CV.jpg" alt="My picture" fill />
         </div>
       </div>
       <div className="infos-container">
-        {interview.map(({ object, content }) => {
+        {interview.map(({ object, content }, idx) => {
           return (
-            <div className="info" key={object}>
+            <div className="info" key={idx}>
               <h1>{object}</h1>
               <div>{content}</div>
             </div>
