@@ -1,7 +1,7 @@
-import './styles.scss';
+import './styles.scss'
 
 const Page = () => {
-  return <div>Home</div>;
-};
+  return <div className="home-view">Home</div>
+}
 
-export default Page;
+export default Page
