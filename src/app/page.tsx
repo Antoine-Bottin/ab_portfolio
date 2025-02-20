@@ -1,58 +1,57 @@
+import { ReactNode } from 'react'
 import './styles.scss'
-import Image from 'next/image'
 
-// const interview = [
-//   {
-//     object: 'Who am I ?',
-//     content: 'Patattieiteiteititietieiteit',
-//   },
-//   {
-//     object: 'About me',
-//     content: 'Patattieiteiteititietieiteit',
-//   },
-//   {
-//     object: 'My favorite color',
-//     content: 'Patattieiteiteititietieiteit',
-//   },
-//   {
-//     object: 'My favorite color',
-//     content: 'Patattieiteiteititietieiteit',
-//   },
-//   {
-//     object: 'My favorite color',
-//     content: 'Patattieiteiteititietieiteit',
-//   },
+interface IInterview {
+    object: string
+    content: ReactNode
+}
+
+// const interview: IInterview[] = [
+//     {
+//         object: 'Who am I?',
+//         content: (
+//             <>
+//                 I&#39;m <span>Antoine</span>, an enthusiastic 40-year-old father
+//                 of two 👶🏼 and a software developer. <br /> Years ago, I used to
+//                 be a 🎻 (cello) player.
+//                 <br /> Then I became a 🍸🍻🎉 (a bartender, not an alcoholic
+//                 😉).
+//                 <br />
+//                 Four years ago, I decided to make a career change to become what
+//                 I really enjoy now.
+//             </>
+//         ),
+//     },
+//     {
+//         object: 'My favorite color',
+//         content: (
+//             <>
+//                 It&#39;s like a mix between blue and grey, but{' '}
+//                 <span>who cares?</span>
+//             </>
+//         ),
+//     },
 // ]
 
 const Page = () => {
-  return (
-    <div className="home-view">
-      <div className="home-view__picture-section">
-        <video
-          className="home-view__picture-section__video"
-          autoPlay
-          loop
-          muted
-        >
-          <source src="/assets/96112-646236949_small.mp4" type="video/mp4" />
-        </video>
-        <div className="home-view__picture-section__picture">
-          <Image src="/assets/Photo_CV.jpg" alt="My picture" fill />
+    return (
+        <div className="home-view">
+            {/* <div className="infos-container">
+                {interview.map(({ object, content }, idx) => {
+                    return (
+                        <div key={idx} className="infos-container__snapscroll">
+                            <div className="infos-container__snapscroll__title">
+                                {object}
+                            </div>
+                            <div className="infos-container__snapscroll__content">
+                                {content}
+                            </div>
+                        </div>
+                    )
+                })}
+            </div> */}
         </div>
-          <div className="home-view__picture-section__title">Antoine Bottin</div>
-      </div>
-      {/* <div className="infos-container"> */}
-      {/* {interview.map(({ object, content }, idx) => {
-          return (
-            <div className="info" key={idx}>
-              <h1>{object}</h1>
-              <div>{content}</div>
-            </div>
-          )
-        })} */}
-      {/* </div> */}
-    </div>
-  )
+    )
 }
 
 export default Page

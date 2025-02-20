@@ -1,0 +1,7 @@
+.view-layout-component {
+    padding: 28rem 2rem 0;
+
+    @media screen and (min-width: 1024px) {
+        padding: 20rem 4rem 0;
+    }
+}

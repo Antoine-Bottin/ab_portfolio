@@ -1,0 +1,29 @@
+.skills-view {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    &__title {
+        font-size: 4rem;
+    }
+
+    .carousel-item {
+        height: 50dvh;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5rem;
+
+        &__picture {
+            img {
+                border-radius: 50%;
+                object-fit: contain;
+            }
+        }
+
+        &__label {
+            font-size: 2rem;
+        }
+    }
+}

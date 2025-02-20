@@ -1,0 +1,66 @@
+.header {
+    position: relative;
+    display: flex;
+
+    &__picture-section {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-bottom: 0.4rem solid white;
+
+        &__video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &__picture {
+            position: relative;
+            top: 50%;
+            height: 35rem;
+            width: 35rem;
+            filter: drop-shadow(0 0 0.5rem black);
+
+            img {
+                border-radius: 50%;
+                object-fit: cover;
+                z-index: 1;
+                border-bottom: 0.4rem solid white;
+            }
+        }
+
+        &__title {
+            position: absolute;
+            top: 25%;
+            text-align: center;
+            font-size: 4rem;
+
+            @media screen and (min-width: 1024px) {
+                top: 100%;
+                text-wrap: wrap;
+                font-size: 6rem;
+                margin-left: 4rem;
+                left: 0;
+            }
+        }
+
+        &__job {
+            position: absolute;
+            text-align: center;
+            bottom: -75%;
+            font-size: 2.5rem;
+
+            @media screen and (min-width: 1024px) {
+                top: 100%;
+                font-size: 4rem;
+                margin-right: 4rem;
+                right: 0;
+                line-height: 200%;
+            }
+        }
+    }
+}
