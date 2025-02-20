@@ -5,6 +5,17 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "noImplicitAny": true, // Warn on expressions and declarations with an implied 'any' type
+    "strictNullChecks": true, // Ensure null and undefined are handled correctly
+    "strictFunctionTypes": true, // Ensure function types are checked correctly
+    "strictBindCallApply": true, // Ensure 'bind', 'call', and 'apply' methods are checked correctly
+    "strictPropertyInitialization": true, // Ensure class properties are initialized correctly
+    "noImplicitThis": true, // Warn on 'this' expressions with an implied 'any' type
+    "alwaysStrict": true, // Parse in strict mode and emit "use strict" for each source file
+    "noUnusedLocals": true, // Warn on unused local variables
+    "noUnusedParameters": true, // Warn on unused parameters
+    "noImplicitReturns": true, // Ensure all code paths in a function return a value
+    "noFallthroughCasesInSwitch": true, // Ensure switch statements have correct fallthrough behavior
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",

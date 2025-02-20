@@ -5,7 +5,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
+  top:0;
   cursor: pointer;
   z-index: 10;
 
@@ -72,11 +73,13 @@
     height: 100%;
     width: 100%;
     background-color: #0a0a0a;
-    opacity: 80%;
+    opacity: 95%;
+    z-index: 2;
   }
 
   &__links {
     display: flex;
+    z-index: 3;
     flex-direction: column;
     row-gap: 1rem;
     position: relative;
