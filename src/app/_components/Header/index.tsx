@@ -15,7 +15,11 @@ const Header = () => {
     console.log(isScrolling)
 
     return (
-        <div className="header">
+        <div
+            className={classNames('header', {
+                'header__is-scrolling': isScrolling,
+            })}
+        >
             <div className="header__picture-section">
                 <video
                     className="header__picture-section__video"

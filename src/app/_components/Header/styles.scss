@@ -1,6 +1,11 @@
 .header {
     position: relative;
     display: flex;
+    margin-bottom: 8rem;
+
+    &__is-scrolling {
+        margin-bottom: 0;
+    }
 
     &__picture-section {
         position: relative;
