@@ -1,10 +1,9 @@
-import { ReactNode } from 'react'
 import './styles.scss'
 
-interface IInterview {
-    object: string
-    content: ReactNode
-}
+// interface IInterview {
+//     object: string
+//     content: ReactNode
+// }
 
 // const interview: IInterview[] = [
 //     {

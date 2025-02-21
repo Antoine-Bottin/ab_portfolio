@@ -21,8 +21,8 @@
         &__picture {
             position: relative;
             top: 50%;
-            height: 35rem;
-            width: 35rem;
+            height: 15rem;
+            width: 15rem;
             filter: drop-shadow(0 0 0.5rem black);
 
             img {
@@ -37,12 +37,12 @@
             position: absolute;
             top: 25%;
             text-align: center;
-            font-size: 4rem;
+            font-size: 2rem;
 
             @media screen and (min-width: 1024px) {
                 top: 100%;
                 text-wrap: wrap;
-                font-size: 6rem;
+                font-size: 3rem;
                 margin-left: 4rem;
                 left: 0;
             }
@@ -51,15 +51,27 @@
         &__job {
             position: absolute;
             text-align: center;
-            bottom: -75%;
-            font-size: 2.5rem;
+            bottom: -100%;
+            font-size: 1.5rem;
+            display: flex;
+            flex-direction: column;
 
             @media screen and (min-width: 1024px) {
                 top: 100%;
-                font-size: 4rem;
+                font-size: 2rem;
                 margin-right: 4rem;
                 right: 0;
-                line-height: 200%;
+                line-height: normal;
+            }
+
+            &__title {
+            }
+
+            &__period {
+                font-style: italic;
+                font-size: 1.2rem;
+                line-height: normal;
+                width: 30rem;
             }
         }
     }

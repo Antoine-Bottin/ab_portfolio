@@ -1,39 +1,63 @@
 .home-view {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     flex-direction: column;
 
+    &__picture-section {
+        position: relative;
+        width: 100%; // Set back to full width
+        display: flex;
+        justify-content: center; // Center the picture horizontally
+
+        &__video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &__picture {
+            position: relative;
+            height: 40rem;
+            width: 40rem;
+
+            img {
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+    }
+
     .infos-container {
+        font-size: 3rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        align-items: center;
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100%;
+        scroll-behavior: smooth;
 
-        &__snapscroll {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .info {
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;
+            justify-content: center;
             scroll-snap-align: start;
-            scroll-snap-stop: always;
-            row-gap: 4rem;
-
-            &__title {
-                font-size: 4rem;
-            }
-
-            &__content {
-                font-size: 3rem;
-
-                span {
-                    background: linear-gradient(
-                        90deg,
-                        rgba(2, 0, 36, 1) 0%,
-                        rgba(9, 9, 121, 1) 35%,
-                        rgba(0, 212, 255, 1) 100%
-                    );
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-            }
+            min-height: 100%;
+            width: 80%;
+            padding: 1rem 0;
         }
     }
 }

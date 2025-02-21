@@ -1,8 +1,14 @@
+'use client'
+
 import Image from 'next/image'
+
+import useExperienceCounter from '@/_hooks/time'
 
 import './styles.scss'
 
 const Header = () => {
+    const period = useExperienceCounter()
+
     return (
         <div className="header">
             <div className="header__picture-section">
@@ -28,7 +34,12 @@ const Header = () => {
                     Antoine Bottin
                 </div>
                 <div className="header__picture-section__job">
-                    Software Developer
+                    <div className="header__picture-section__job__title">
+                        Software Developer <div>for</div>
+                    </div>
+                    <div className="header__picture-section__job__period">
+                        {period}
+                    </div>
                 </div>
             </div>
         </div>

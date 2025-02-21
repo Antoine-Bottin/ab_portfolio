@@ -26,12 +26,12 @@ const navigationMenu = [
         label: 'What about my skills ?',
         value: '/skills',
     },
+    { label: 'Projects', value: '/projects' },
+    { label: 'Actual learnings', value: '/learnings' },
     {
         label: 'Contact',
         value: '/contact',
     },
-    { label: 'Projects', value: '/projects' },
-    { label: 'Actual learnings', value: '/learnings' },
 ]
 
 export default function RootLayout({
