@@ -1,6 +1,7 @@
 .view-layout-component {
+    height: calc(100dvh - 16rem);
     margin: 0 auto;
-    max-width: 120rem;
+    max-width: 102.4rem;
     padding: 0 2rem;
 
     @media screen and (min-width: 768px) {
