@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Bungee } from 'next/font/google'
 import BurgerMenu from './_components/BurgerMenu'
+import { Analytics } from '@vercel/analytics/react'
 import ViewLayout from './_components/ViewLayout'
 import Header from './_components/Header'
 
@@ -42,6 +43,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${bungee.className}`}>
+                <Analytics />
                 <BurgerMenu menu={navigationMenu} />
                 <Header />
                 <ViewLayout>{children}</ViewLayout>
