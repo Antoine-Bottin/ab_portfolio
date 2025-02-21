@@ -3,11 +3,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-block-start: 10rem;
-
-    @media screen and (min-width: 1024px) {
-        margin-block-start: unset;
-    }
 
     .infos-container {
         height: fit-content;
@@ -15,6 +10,7 @@
         scroll-snap-type: y mandatory;
         overflow-y: scroll;
         scroll-behavior: smooth;
+        width: 100%;
 
         -ms-overflow-style: none;
         scrollbar-width: none;
@@ -29,18 +25,32 @@
             flex-direction: column;
             row-gap: 3rem;
             height: 100%;
+            width: 100%;
             scroll-snap-align: start;
             text-align: center;
             justify-content: center;
             align-items: center;
 
+            @media screen and (min-width: 1024px) {
+                justify-content: center;
+            }
+
             &__title {
-                font-size: 2.2rem;
+                font-size: 2rem;
+
+                @media screen and (min-width: 1024px) {
+                    font-size: 2.2rem;
+                }
             }
 
             &__content {
-                font-size: 1.5rem;
-                line-height: 200%;
+                font-size: 1rem;
+                line-height: 150%;
+
+                @media screen and (min-width: 1024px) {
+                    font-size: 1.5rem;
+                    line-height: 200%;
+                }
 
                 span {
                     background: linear-gradient(
@@ -55,6 +65,7 @@
                         rgba(9, 9, 121, 1) 35%,
                         rgba(0, 212, 255, 1) 100%
                     );
+                    background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                 }

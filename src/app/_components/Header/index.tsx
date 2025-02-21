@@ -2,12 +2,17 @@
 
 import Image from 'next/image'
 
-import useExperienceCounter from '@/_hooks/time'
-
+import useExperienceCounter from '@/_hooks/useExperienceCounter'
 import './styles.scss'
+import useScrollPosition from '@/_hooks/useOnScroll'
+import classNames from 'classnames'
 
 const Header = () => {
     const period = useExperienceCounter()
+
+    const { isScrolling } = useScrollPosition()
+
+    console.log(isScrolling)
 
     return (
         <div className="header">
@@ -33,7 +38,12 @@ const Header = () => {
                 <div className="header__picture-section__title">
                     Antoine Bottin
                 </div>
-                <div className="header__picture-section__job">
+                <div
+                    className={classNames('header__picture-section__job', {
+                        'header__picture-section__job__is-scrolling':
+                            isScrolling,
+                    })}
+                >
                     <div className="header__picture-section__job__title">
                         Software Developer <div>for</div>
                     </div>

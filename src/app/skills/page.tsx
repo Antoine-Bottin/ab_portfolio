@@ -14,9 +14,11 @@ import './styles.scss'
 
 const Page = () => {
     return (
-        <div className="skills-view">
-            <h1 className="skills-view__title">What am I good at ? </h1>
-        </div>
+        <>
+            <div className="skills-view">
+                <h1 className="skills-view__title">What am I good at ? </h1>
+            </div>
+        </>
     )
 }
 

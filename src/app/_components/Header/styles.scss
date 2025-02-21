@@ -51,10 +51,20 @@
         &__job {
             position: absolute;
             text-align: center;
-            bottom: -100%;
+            bottom: -105%;
             font-size: 1.5rem;
             display: flex;
             flex-direction: column;
+
+            transition: all 0.5s ease-in-out;
+            transform: translateY(0);
+
+            &__is-scrolling {
+                display: none;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            }
 
             @media screen and (min-width: 1024px) {
                 top: 100%;
@@ -63,6 +73,12 @@
                 margin-right: 4rem;
                 right: 0;
                 line-height: normal;
+
+                &__is-scrolling {
+                    display: block;
+                    opacity: 1;
+                    transform: translateY(0);
+                }
             }
 
             &__title {
@@ -73,6 +89,15 @@
                 font-size: 1.2rem;
                 line-height: normal;
                 width: 30rem;
+                border-bottom: 0.2rem solid white;
+                padding-block-end: 0.5rem;
+
+                @media screen and (min-width: 1024px) {
+                    font-style: italic;
+                    line-height: normal;
+                    width: 30rem;
+                    border-bottom: none;
+                }
             }
         }
     }
