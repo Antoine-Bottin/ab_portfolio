@@ -36,19 +36,19 @@
             }
 
             &__title {
-                font-size: 2rem;
+                font-size: 2.5rem;
 
                 @media screen and (min-width: 1024px) {
-                    font-size: 2.2rem;
+                    font-size: 3rem;
                 }
             }
 
             &__content {
-                font-size: 1rem;
+                font-size: 1.5rem;
                 line-height: 150%;
 
                 @media screen and (min-width: 1024px) {
-                    font-size: 1.5rem;
+                    font-size: 2rem;
                     line-height: 200%;
                 }
 
