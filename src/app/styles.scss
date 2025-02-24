@@ -4,6 +4,9 @@
     flex-direction: column;
     justify-content: center;
 
+    @media screen and (min-width: 1024px) {
+    }
+
     .infos-container {
         height: fit-content;
         font-size: 2rem;
@@ -72,8 +75,9 @@
                 }
 
                 .google-map {
-                    height: 25rem;
-                    width: 25rem;
+                    border: 0.2rem solid white;
+                    height: 20rem;
+                    width: 20rem;
 
                     @media screen and (min-width: 1024px) {
                         height: 40rem;

@@ -4,7 +4,6 @@ const useScrollPosition = () => {
     const [scrollPosition, setScrollPosition] = useState(0)
     //@ts-expect-error event not yet typed
     const handleScroll = (e) => {
-        console.log(e.target.scrollTop)
         setScrollPosition(e.target.scrollTop)
     }
 

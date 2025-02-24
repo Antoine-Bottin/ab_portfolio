@@ -12,8 +12,6 @@ const Header = () => {
 
     const { isScrolling } = useScrollPosition()
 
-    console.log(isScrolling)
-
     return (
         <div
             className={classNames('header', {
