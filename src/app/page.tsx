@@ -6,7 +6,6 @@ import { AdvancedMarker, APIProvider, Map } from '@vis.gl/react-google-maps'
 import './styles.scss'
 
 interface IInterview {
-    object: string
     content: ReactNode
 }
 
@@ -14,31 +13,29 @@ const position = { lat: 49.922992, lng: 1.077483 }
 
 const interview: IInterview[] = [
     {
-        object: 'Who am I?',
         content: (
             <>
-                I&#39;m <span>Antoine</span>, an enthusiastic 40-year-old father
-                of two 👶🏼 and a software developer. <br /> Years ago, I used to
-                be a 🎻 (cello) player.
-                <br /> Then I became a 🍸🍻🎉 (a bartender, not an alcoholic
-                😉).
-                <br />
-                Four years ago, I decided to make a career change to become what
-                I really enjoy now.
+                Passionate about <span>web development</span>, I have deepened
+                my Frontend <span>Javascript / Typescript</span> skills with the
+                <span> ReactJS and NextJS</span> frameworks for three years. I
+                love taking on new challenges, and discovering new languages
+                does not scare me at all. I enjoy manipulating data and work on
+                my backend skills in my spare time.{' '}
+                <span>Reconverted for three years,</span>I have found in this
+                ever-evolving field something to satisfy my appetite for
+                creativity.
             </>
         ),
     },
     {
-        object: 'My favorite color',
         content: (
             <>
-                It&#39;s like a mix between blue and grey, but{' '}
+                My favourite color is like a mix between blue and grey, but{' '}
                 <span>who cares?</span>
             </>
         ),
     },
     {
-        object: 'My living place ?',
         content: (
             <div className="google-map">
                 <APIProvider
@@ -64,13 +61,11 @@ const interview: IInterview[] = [
 const Page = () => {
     return (
         <div className="home-view">
+            <h1 className="home-view__title">About me </h1>
             <div className="infos-container">
-                {interview.map(({ object, content }, idx) => {
+                {interview.map(({ content }, idx) => {
                     return (
                         <div key={idx} className="infos-container__snapscroll">
-                            <div className="infos-container__snapscroll__title">
-                                {object}
-                            </div>
                             <div className="infos-container__snapscroll__content">
                                 {content}
                             </div>

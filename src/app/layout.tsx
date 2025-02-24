@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Bungee } from 'next/font/google'
+import { Inconsolata } from 'next/font/google'
 import BurgerMenu from './_components/BurgerMenu'
 import { Analytics } from '@vercel/analytics/react'
 import ViewLayout from './_components/ViewLayout'
@@ -7,8 +7,8 @@ import Header from './_components/Header'
 
 import './globals.scss'
 
-const bungee = Bungee({
-    variable: '--font-bungee',
+const mainFont = Inconsolata({
+    variable: '--font-inconsolata',
     subsets: ['latin'],
     weight: ['400'],
 })
@@ -42,7 +42,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${bungee.className}`}>
+            <body className={`${mainFont.className}`}>
                 <Analytics />
                 <BurgerMenu menu={navigationMenu} />
                 <Header />

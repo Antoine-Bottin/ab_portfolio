@@ -4,7 +4,15 @@
     flex-direction: column;
     justify-content: center;
 
-    @media screen and (min-width: 1024px) {
+    &__title {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-block: 10rem 1rem;
+
+        @media screen and (min-width: 768px) {
+            font-size: 3rem;
+            margin-block: 0 5rem;
+        }
     }
 
     .infos-container {
@@ -31,7 +39,6 @@
             width: 100%;
             scroll-snap-align: start;
             text-align: center;
-
             justify-content: center;
             align-items: center;
 
@@ -39,34 +46,24 @@
                 justify-content: center;
             }
 
-            &__title {
-                font-size: 2.5rem;
-
-                @media screen and (min-width: 1024px) {
-                    font-size: 3rem;
-                }
-            }
-
             &__content {
                 font-size: 1.5rem;
                 line-height: 150%;
 
                 @media screen and (min-width: 1024px) {
-                    font-size: 2rem;
+                    font-size: 2.5rem;
                     line-height: 200%;
                 }
 
                 span {
                     background: linear-gradient(
                         90deg,
-                        rgba(2, 0, 36, 1) 0%,
-                        rgba(9, 9, 121, 1) 35%,
+                        rgba(9, 9, 121, 1) 0%,
                         rgba(0, 212, 255, 1) 100%
                     );
                     background: -webkit-linear-gradient(
                         90deg,
-                        rgba(2, 0, 36, 1) 0%,
-                        rgba(9, 9, 121, 1) 35%,
+                        rgba(9, 9, 121, 1) 0%,
                         rgba(0, 212, 255, 1) 100%
                     );
                     background-clip: text;

@@ -7,6 +7,10 @@
         margin-bottom: 0;
     }
 
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 5rem;
+    }
+
     &__picture-section {
         position: relative;
         width: 100%;
@@ -28,7 +32,6 @@
             top: 50%;
             height: 15rem;
             width: 15rem;
-            filter: drop-shadow(0 0 0.5rem black);
 
             img {
                 border-radius: 50%;
@@ -60,30 +63,23 @@
             font-size: 1.8rem;
             display: flex;
             flex-direction: column;
+            margin-block-start: 0.3rem;
 
-            transition: all 0.5s ease-in-out;
+            opacity: 1;
             transform: translateY(0);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 
-            &__is-scrolling {
-                display: none;
+            .header__is-scrolling & {
                 opacity: 0;
-                transform: translateY(20px);
-                transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+                transform: translateY(-2rem);
             }
 
             @media screen and (min-width: 1024px) {
                 top: 100%;
                 font-size: 2.2rem;
-                margin-block-start: 0.2rem;
                 margin-right: 4rem;
                 right: 8%;
                 line-height: normal;
-
-                &__is-scrolling {
-                    display: block;
-                    opacity: 1;
-                    transform: translateY(0);
-                }
             }
 
             &__period {
