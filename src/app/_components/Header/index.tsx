@@ -2,10 +2,11 @@
 
 import Image from 'next/image'
 
-import useExperienceCounter from '@/_hooks/useExperienceCounter'
-import './styles.scss'
-import useScrollPosition from '@/_hooks/useOnScroll'
 import classNames from 'classnames'
+import useExperienceCounter from '~/_hooks/useExperienceCounter'
+import useScrollPosition from '~/_hooks/useOnScroll'
+
+import './styles.scss'
 
 const Header = () => {
     const period = useExperienceCounter()

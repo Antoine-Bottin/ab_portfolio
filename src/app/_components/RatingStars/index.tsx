@@ -7,7 +7,7 @@ const RatingStars = ({ value }: { value: number }) => {
                 <MdOutlineStar size={15} key={idx} color="midnightblue" />
             ))}
             {[...new Array(5 - value)].map((__, idx) => (
-                <MdOutlineStarBorder size={15} key={idx} color="midnightblue" />
+                <MdOutlineStarBorder size={15} key={idx} color="white" />
             ))}
         </div>
     )

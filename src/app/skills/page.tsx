@@ -5,10 +5,16 @@ import './styles.scss'
 
 const techCards = [
     {
-        label: 'React',
+        label: 'ReactJS',
         src: '/assets/icons/react-2.svg',
         level: 4,
         comment: 'I have been working with React since my bootcamp.',
+    },
+    {
+        label: 'React Native',
+        src: '/assets/icons/react-2.svg',
+        level: 2,
+        comment: `I haven't worked with it for a long time, but I really appreciate mobile development.`,
     },
     {
         label: 'Next.js',
@@ -32,14 +38,14 @@ const techCards = [
         label: 'HTML',
         src: '/assets/icons/html-logo.png',
         level: 4,
-        comment: 'Obvious but not easy to be reallh good at.',
+        comment: 'Obvious but not easy to be really good at.',
     },
     {
         label: 'T3 stack',
         src: '/assets/icons/t3-light.svg',
-        level: 4,
+        level: 3,
         comment:
-            'I discovered it few weeks ago and I enjoy a lot be back on fullstack development.',
+            'I discovered it few weeks ago and I enjoy a lot to be back on fullstack development.',
     },
     {
         label: 'Github',
@@ -49,23 +55,29 @@ const techCards = [
     },
 ]
 
+const sortedTechCards = techCards.sort((a, b) => {
+    return b.level - a.level
+})
+
 const Page = () => {
     return (
         <>
             <div className="skills-view">
                 <h1 className="skills-view__title">What am I good at ? </h1>
                 <div className="skills-view__content">
-                    {techCards.map(({ label, src, level, comment }, idx) => {
-                        return (
-                            <TechCard
-                                key={idx}
-                                label={label}
-                                src={src}
-                                level={level}
-                                comment={comment}
-                            />
-                        )
-                    })}
+                    {sortedTechCards.map(
+                        ({ label, src, level, comment }, idx) => {
+                            return (
+                                <TechCard
+                                    key={idx}
+                                    label={label}
+                                    src={src}
+                                    level={level}
+                                    comment={comment}
+                                />
+                            )
+                        }
+                    )}
                 </div>
             </div>
         </>

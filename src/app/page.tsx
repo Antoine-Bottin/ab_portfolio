@@ -31,7 +31,7 @@ const interview: IInterview[] = [
         content: (
             <>
                 My favourite color is like a mix between blue and grey, but{' '}
-                <span>who cares?</span>
+                <span>who cares?</span> 😂
             </>
         ),
     },
