@@ -1,18 +1,18 @@
 .header {
     position: relative;
     display: flex;
-    margin-bottom: 10rem;
+    padding-bottom: 10rem;
 
     &__is-scrolling {
-        margin-bottom: 0;
+        padding-bottom: 0;
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: 5rem;
+            padding-bottom: 5rem;
         }
     }
 
     @media screen and (min-width: 1024px) {
-        margin-bottom: 5rem;
+        padding-bottom: 5rem;
     }
 
     &__picture-section {
@@ -75,7 +75,7 @@
 
             .header__is-scrolling & {
                 opacity: 0;
-                transform: translateY(-2rem);
+                transform: translateY(-10rem);
             }
 
             @media screen and (min-width: 1024px) {
