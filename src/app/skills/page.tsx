@@ -1,6 +1,6 @@
 'use client'
 
-import TechCard from '../_components/TechCard'
+import TechCard from '../../components/TechCard'
 import './styles.scss'
 
 const techCards = [

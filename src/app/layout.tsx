@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import { Inconsolata } from 'next/font/google'
-import BurgerMenu from './_components/BurgerMenu'
+import BurgerMenu from '../components/BurgerMenu'
 import { Analytics } from '@vercel/analytics/react'
-import ViewLayout from './_components/ViewLayout'
-import Header from './_components/Header'
+import ViewLayout from '../components/ViewLayout'
+import Header from '../components/Header'
 
 import './globals.scss'
 
