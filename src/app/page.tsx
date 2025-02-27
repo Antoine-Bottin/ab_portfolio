@@ -30,6 +30,17 @@ const interview: IInterview[] = [
     {
         content: (
             <>
+                Years ago I used to be a musician 🎻 (cello player), and then I
+                started working in <span>hospitality</span> and became
+                🍻🍸🍹🎉(bartender, not alcoholic). One day in <span>2020</span>{' '}
+                I decided to do what I really wanted to do for living and did a
+                Bootcamp to become <span>web developer</span>.
+            </>
+        ),
+    },
+    {
+        content: (
+            <>
                 My favourite color is like a mix between blue and grey, but{' '}
                 <span>who cares?</span> 😂
             </>
@@ -37,23 +48,26 @@ const interview: IInterview[] = [
     },
     {
         content: (
-            <div className="google-map">
-                <APIProvider
-                    apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY!}
-                >
-                    <Map
-                        defaultCenter={position}
-                        defaultZoom={8}
-                        mapId="Dieppe"
-                        disableDefaultUI={true}
-                        onTilesLoaded={() => console.log('loaded')}
-                        fullscreenControl={true}
-                        colorScheme="DARK"
+            <>
+                I m leaving in the crountryside close to Dieppe
+                <div className="google-map">
+                    <APIProvider
+                        apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY!}
                     >
-                        <AdvancedMarker position={position} />
-                    </Map>
-                </APIProvider>
-            </div>
+                        <Map
+                            defaultCenter={position}
+                            defaultZoom={8}
+                            mapId="Dieppe"
+                            disableDefaultUI={true}
+                            onTilesLoaded={() => console.log('loaded')}
+                            fullscreenControl={true}
+                            colorScheme="DARK"
+                        >
+                            <AdvancedMarker position={position} />
+                        </Map>
+                    </APIProvider>
+                </div>
+            </>
         ),
     },
 ]

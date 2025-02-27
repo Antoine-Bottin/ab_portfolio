@@ -1,6 +1,5 @@
 .projects-view {
     display: flex;
-    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     height: calc(100dvh - 25.5rem);
@@ -8,40 +7,64 @@
     &__title {
         font-size: 2.5rem;
         text-align: center;
-        margin-block: 10rem 5rem;
+        margin-block: 10rem 2rem;
 
         @media screen and (min-width: 1024px) {
             font-size: 3rem;
-            margin-block: 5rem 5rem;
+            margin-block: 5rem 2rem;
+        }
+    }
+
+    &__badges {
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-block-end: 2rem;
+
+        @media screen and (min-width: 1024px) {
+            justify-content: center;
+            column-gap: 2rem;
+        }
+
+        &__badge {
+            font-size: 1.5rem;
+            padding: 0.5rem 1.5rem;
+            border: 0.2rem solid blue;
+            border-radius: 5rem;
+
+            &--selected {
+                transition: background-color ease-in-out 0.5s,
+                    border-color ease-in-out 0.5s;
+
+                background: rgba(0, 0, 255, 0.267);
+                border: 0.2rem solid lightblue;
+            }
         }
     }
 
     &__content {
-        height: fit-content;
-        overflow-y: scroll;
-        display: flex;
-        flex-direction: column;
-        row-gap: 5rem;
+        overflow: scroll;
 
-        &__mwm,
-        &__leatherspa {
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            row-gap: 2rem;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        ::-webkit-scrollbar {
+            display: none;
+        }
 
-            &__title {
-                font-size: 2rem;
-                text-align: center;
-                margin-block-end: 5rem;
-            }
+        &__title {
+            font-size: 2rem;
+            text-align: center;
+            margin-block-end: 5rem;
+        }
 
-            &__cards {
-                justify-content: center;
-                display: flex;
-                flex-wrap: wrap;
-                gap: 2rem;
-            }
+        &__cards {
+            height: 100%;
+            justify-content: center;
+            display: flex;
+
+            flex-wrap: wrap;
+            gap: 2rem;
         }
     }
 }
