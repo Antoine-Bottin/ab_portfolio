@@ -20,7 +20,7 @@
         width: 100%;
         display: flex;
         justify-content: space-around;
-        margin-block-end: 2rem;
+        margin-block-end: 3rem;
 
         @media screen and (min-width: 1024px) {
             justify-content: center;
@@ -30,15 +30,15 @@
         &__badge {
             font-size: 1.5rem;
             padding: 0.5rem 1.5rem;
-            border: 0.2rem solid blue;
+            border: 0.2rem solid rgba(9, 9, 121, 1);
             border-radius: 5rem;
 
             &--selected {
                 transition: background-color ease-in-out 0.5s,
                     border-color ease-in-out 0.5s;
 
-                background: rgba(0, 0, 255, 0.267);
-                border: 0.2rem solid lightblue;
+                background: rgba(9, 9, 121, 1);
+                border: 0.2rem solid rgba(0, 212, 255, 1);
             }
         }
     }
