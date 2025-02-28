@@ -30,8 +30,8 @@ const navigationMenu = [
     { label: 'Projects', value: '/projects' },
     { label: 'Actual learnings', value: '/learnings' },
     {
-        label: 'Contact',
-        value: '/contact',
+        label: 'Contacts',
+        value: '/contacts',
     },
 ]
 
