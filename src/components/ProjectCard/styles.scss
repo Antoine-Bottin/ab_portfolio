@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
-    // border-style: solid;
+    border-style: solid;
     justify-content: space-between;
     border: 1rem solid;
-    // border-image-slice: 1;
-    // border-width: 0.3rem;
+    border-image-slice: 1;
+    border-width: 0.3rem;
     padding: 2rem;
     cursor: pointer;
     border-image: linear-gradient(
