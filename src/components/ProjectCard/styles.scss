@@ -3,8 +3,6 @@
     flex-direction: column;
     row-gap: 2rem;
     justify-content: space-between;
-    // border: 0.2rem solid rgba(9, 9, 121, 1);
-    // border-radius: 2rem;
 
     border: 0.2rem solid transparent !important;
     border-image-slice: 1 !important;
@@ -29,7 +27,6 @@
     }
 
     &:hover {
-        // border: 0.2rem solid rgba(0, 212, 255, 1);
         border-image-source: linear-gradient(
             90deg,
             rgba(0, 212, 255, 1) 0%,

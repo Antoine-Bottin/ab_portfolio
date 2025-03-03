@@ -28,7 +28,7 @@ const navigationMenu = [
         value: '/skills',
     },
     { label: 'Projects', value: '/projects' },
-    { label: 'Actual learnings', value: '/learnings' },
+    { label: 'Current projects', value: '/current' },
     {
         label: 'Contacts',
         value: '/contacts',

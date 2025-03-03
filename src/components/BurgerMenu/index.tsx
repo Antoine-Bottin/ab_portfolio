@@ -11,6 +11,7 @@ import './styles.scss'
 interface Props {
     menu: { label: string; value: string }[]
 }
+
 const BurgerMenu = ({ menu }: Props) => {
     const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
 

@@ -1,6 +1,14 @@
 .tech-card-component {
-    border: 0.2rem solid rgba(9, 9, 121, 1);
+    border: 0.2rem solid transparent !important;
+    border-image-slice: 1 !important;
+    border-width: 0.3rem;
     border-radius: 2rem;
+
+    border-image-source: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(0, 212, 255, 1) 100%
+    ) !important;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -13,8 +21,11 @@
     transition: border 0.8s ease-in-out;
 
     &:hover {
-        border: 0.2rem solid rgba(0, 212, 255, 1);
-
+        border-image-source: linear-gradient(
+            90deg,
+            rgba(0, 212, 255, 1) 0%,
+            rgba(2, 0, 36, 1) 100%
+        ) !important;
         filter: brightness(1.2);
     }
 
