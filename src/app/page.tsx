@@ -49,7 +49,7 @@ const interview: IInterview[] = [
     {
         content: (
             <>
-                I m leaving in the crountryside close to Dieppe
+                I m leaving in the countryside close to Dieppe
                 <div className="google-map">
                     <APIProvider
                         apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY!}
