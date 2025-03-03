@@ -1,7 +1,9 @@
 'use client'
 
+import useOnScroll from '~/_hooks/useOnScroll'
 import TechCard from '../../components/TechCard'
 import './styles.scss'
+import classNames from 'classnames'
 
 const techCards = [
     {
@@ -60,9 +62,15 @@ const sortedTechCards = techCards.sort((a, b) => {
 })
 
 const Page = () => {
+    const { isScrolling } = useOnScroll()
+
     return (
         <>
-            <div className="skills-view">
+            <div
+                className={classNames('skills-view', {
+                    'skills-view--is-scrolling': isScrolling,
+                })}
+            >
                 <h1 className="skills-view__title">What am I good at ? </h1>
                 <div className="skills-view__content">
                     {sortedTechCards.map(

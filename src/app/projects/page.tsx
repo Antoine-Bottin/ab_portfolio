@@ -4,6 +4,7 @@ import { useState } from 'react'
 
 import './styles.scss'
 import classNames from 'classnames'
+import useOnScroll from '~/_hooks/useOnScroll'
 
 const projectCard = [
     {
@@ -70,6 +71,8 @@ const Page = () => {
 
     const handleBadgeClick = (value: string) => () => setTab(value)
 
+    const { isScrolling } = useOnScroll()
+
     const filteredProjectCard = projectCard.filter(
         (project) => project.company === tab
     )
@@ -83,7 +86,11 @@ const Page = () => {
 
     return (
         <>
-            <div className="projects-view">
+            <div
+                className={classNames('projects-view', {
+                    'projects-view--is-scrolling': isScrolling,
+                })}
+            >
                 <h1 className="projects-view__title">What I worked on.</h1>
                 <div className="projects-view__badges">
                     {badges.map(({ label, value }, idx) => (
