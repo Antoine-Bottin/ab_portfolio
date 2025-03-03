@@ -42,6 +42,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <script
+                src="https://platform.linkedin.com/badges/js/profile.js"
+                async
+                defer
+                type="text/javascript"
+            ></script>
             <body className={`${mainFont.className}`}>
                 <Analytics />
                 <BurgerMenu menu={navigationMenu} />
