@@ -4,6 +4,10 @@
     flex-direction: column;
     height: calc(100dvh - 25.5rem);
 
+    &--is-scrolling {
+        height: calc(100dvh - 15.5rem);
+    }
+
     &__title {
         font-size: 2.5rem;
         text-align: center;
@@ -16,8 +20,24 @@
     }
 
     &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 2rem;
+
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
         .badge-base .LI-profile-badge {
             width: 14rem;
+        }
+
+        &__email {
+            font-size: 3rem;
         }
     }
 }

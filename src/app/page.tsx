@@ -4,6 +4,8 @@ import { ReactNode } from 'react'
 import { AdvancedMarker, APIProvider, Map } from '@vis.gl/react-google-maps'
 
 import './styles.scss'
+import useOnScroll from '~/_hooks/useOnScroll'
+import classNames from 'classnames'
 
 interface IInterview {
     content: ReactNode
@@ -73,8 +75,14 @@ const interview: IInterview[] = [
 ]
 
 const Page = () => {
+    const { isScrolling } = useOnScroll()
+
     return (
-        <div className="home-view">
+        <div
+            className={classNames('home-view', {
+                'projects-view--is-scrolling': isScrolling,
+            })}
+        >
             <h1 className="home-view__title">About me </h1>
             <div className="infos-container">
                 {interview.map(({ content }, idx) => {

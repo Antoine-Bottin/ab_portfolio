@@ -1,10 +1,23 @@
+'use client'
+
+import classNames from 'classnames'
+import useOnScroll from '~/_hooks/useOnScroll'
 import './styles.scss'
 
 const Page = () => {
+    const { isScrolling } = useOnScroll()
+
     return (
-        <div className="contacts-view">
+        <div
+            className={classNames('contacts-view', {
+                'projects-view--is-scrolling': isScrolling,
+            })}
+        >
             <h1 className="contacts-view__title">Contact me.</h1>
             <div className="contacts-view__content">
+                <div className="contacts-view__content__email">
+                    a.bottin.dev@gmail.com
+                </div>
                 <div
                     className="badge-base LI-profile-badge"
                     data-locale="fr_FR"
