@@ -55,7 +55,7 @@ export default function RootLayout({
                     autoClose={3000}
                     newestOnTop={false}
                     theme="dark"
-                    style={{ fontSize: '1rem' }}
+                    style={{ fontSize: '1.5rem' }}
                 />
                 <BurgerMenu menu={navigationMenu} />
                 <Header />
