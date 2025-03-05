@@ -4,8 +4,10 @@ import BurgerMenu from '../components/BurgerMenu'
 import { Analytics } from '@vercel/analytics/react'
 import ViewLayout from '../components/ViewLayout'
 import Header from '../components/Header'
+import { ToastContainer } from 'react-toastify'
 
 import './globals.scss'
+import Script from 'next/script'
 
 const mainFont = Inconsolata({
     variable: '--font-inconsolata',
@@ -42,14 +44,19 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <script
-                src="https://platform.linkedin.com/badges/js/profile.js"
-                async
-                defer
-                type="text/javascript"
-            ></script>
             <body className={`${mainFont.className}`}>
+                <Script
+                    src="https://platform.linkedin.com/badges/js/profile.js"
+                    strategy="lazyOnload"
+                />
                 <Analytics />
+                <ToastContainer
+                    position="bottom-center"
+                    autoClose={3000}
+                    newestOnTop={false}
+                    theme="dark"
+                    style={{ fontSize: '1rem' }}
+                />
                 <BurgerMenu menu={navigationMenu} />
                 <Header />
                 <ViewLayout>{children}</ViewLayout>

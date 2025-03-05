@@ -24,7 +24,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        row-gap: 2rem;
+        row-gap: 4rem;
 
         -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none; /* Firefox */
@@ -37,7 +37,21 @@
         }
 
         &__email {
+            width: 100%;
+            display: flex;
+            column-gap: 2rem;
+            align-items: center;
             font-size: 3rem;
+
+            .icon {
+                cursor: pointer;
+                transition: all ease-in-out 0.3s;
+
+                &:hover {
+                    opacity: 50%;
+                    transition: all ease-in-out 0.3s;
+                }
+            }
         }
     }
 }
