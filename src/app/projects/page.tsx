@@ -43,9 +43,16 @@ const projectCard = [
         company: 'leatherspa',
     },
     {
+        pictureSrc: '/assets/pictures/Photo_CV.jpg',
+        videoSrc: '/assets/videos/Xperience.mp4',
+        title: 'Xperience',
+        url: 'https://xperience.abottin.dev',
+        company: 'personnal',
+    },
+    {
         pictureSrc: '/assets/icons/github-mark-white.png',
         videoSrc: '/assets/videos/github.mp4',
-        title: 'Personnal',
+        title: 'Github',
         url: 'https://github.com/Antoine-Bottin',
         company: 'personnal',
     },
@@ -81,7 +88,7 @@ const Page = () => {
         mwm: `As a part of MWM Frontend team, we worked on about twenty different project. Most of them are private. Here are some public one.`,
         leatherspa: `As a part of Leatherspa Frontend team, we worked on the commercial Website, the admin dashboard (private), and the Point of Sale Software where I discovered SwiftUI (private).`,
         personnal:
-            'A lot of different things, trying to cover a lot of subject I like. Recently a micro project to test T3 Stack. Feel free to visit my github account',
+            'A lot of different things, trying to cover a lot of subject I like. Recently Xperience to play a bit with OpenAi fine tuning. Feel free to visit my github account',
     }
 
     return (
