@@ -7,11 +7,18 @@ import useExperienceCounter from '~/_hooks/useExperienceCounter'
 import useScrollPosition from '~/_hooks/useOnScroll'
 
 import './styles.scss'
+import SwitchButton from '../SwitchButton'
+import { useState } from 'react'
 
 const Header = () => {
     const period = useExperienceCounter()
 
     const { isScrolling } = useScrollPosition()
+
+    const [isInputChecked, setIsInputChecked] = useState(false)
+
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) =>
+        setIsInputChecked(event.currentTarget.checked)
 
     return (
         <div
@@ -33,9 +40,15 @@ const Header = () => {
                 </video>
                 <div className="header__picture-section__picture">
                     <Image
-                        src="/assets/pictures/Photo_CV.jpg"
+                        src={`/assets/pictures/Photo_CV${
+                            isInputChecked ? '2' : ''
+                        }.jpg`}
                         alt="My picture"
                         fill
+                    />
+                    <SwitchButton
+                        className="header-switch-button"
+                        onInputChange={handleInputChange}
                     />
                 </div>
                 <div className="header__picture-section__title">

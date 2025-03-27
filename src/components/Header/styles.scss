@@ -43,6 +43,12 @@
                 z-index: 1;
                 border-bottom: 0.4rem solid white;
             }
+
+            .header-switch-button {
+                z-index: 10;
+                top: 80%;
+                left: 40%;
+            }
         }
 
         &__title {
